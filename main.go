@@ -16,7 +16,7 @@ const version string = "0.1"
 var (
 	showVersion   = flag.Bool("version", false, "Print version information.")
 	listenAddress = flag.String("listen-address", ":9423", "Address on which to expose metrics.")
-	metricsPath   = flag.String("web.telemetry-path", "/metrics", "Path under which to expose metrics.")
+	metricsPath   = flag.String("path", "/metrics", "Path under which to expose metrics.")
 	command       = flag.String("cmd", "", "Command to use i.e. hpacucli/ssacli")
 )
 
