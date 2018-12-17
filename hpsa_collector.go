@@ -26,7 +26,7 @@ func init() {
 	controllerDesc = prometheus.NewDesc(prefix+"controller", "Controller state", []string{"name", "slot", "status", "cache_status", "battery_status"}, nil)
 	arrayDesc = prometheus.NewDesc(prefix+"array", "Array state", []string{"ctrl_slot", "name", "type", "unused_space", "status"}, nil)
 	logicalDriveDesc = prometheus.NewDesc(prefix+"logical_drive", "Logical drive state", []string{"ctrl_slot", "array", "index", "size", "raid", "status"}, nil)
-	physicalDriveDesc = prometheus.NewDesc(prefix+"physical_drive", "Physical drive state", []string{"ctrl_slot", "array", "size", "position", "status"}, nil)
+	physicalDriveDesc = prometheus.NewDesc(prefix+"physical_drive", "Physical drive state", []string{"ctrl_slot", "array", "size", "position", "type", "status"}, nil)
 }
 
 func getCmdOutput() ([]byte, error) {
