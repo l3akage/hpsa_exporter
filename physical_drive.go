@@ -10,6 +10,6 @@ type physicalDrive struct {
 }
 
 func (d physicalDrive) Describe(ch chan<- prometheus.Metric, c controller, a array) {
-	l := []string{c.Slot, a.Name, d.Size, d.Position, d.Status}
+	l := []string{c.Slot, a.Name, d.Size, d.Position, d.Type, d.Status}
 	ch <- prometheus.MustNewConstMetric(physicalDriveDesc, prometheus.GaugeValue, 1, l...)
 }
