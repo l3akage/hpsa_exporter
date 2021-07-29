@@ -169,7 +169,7 @@ func parseController(lines []string, idx int) (*controller, int) {
 
 func parseOutput(output []byte) ([]*controller, error) {
 	var controllers []*controller
-	lines := strings.Split(string(output), "\n")
+	lines := strings.Split(strings.ReplaceAll(string(output), "\r\n", "\n"), "\n")
 	idx := 0
 
 	for {
